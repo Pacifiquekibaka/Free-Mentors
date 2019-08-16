@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    background: #ececec;
+}
+h1, h2, h3, h4, h5 {
+  border-bottom: 1px solid #ccc;
+  color: #3F51B5;
+  padding-bottom: 8px
+}
+.container {
+  margin: auto;
+  width: 350px;
+  text-align: center;
+}
+.listFlex {display: flex; justify-content: center;}
+
+img {
+  width: 100%;
+}
+.button {
+    background-color: #2F917C;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 10px 24px;
+    cursor: pointer;
+  }
+  .button:hover{
+      color: #000000;
+      background-color: #3F51B5;
+  }
