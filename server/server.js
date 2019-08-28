@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-//import mentorRoutes from './routes/mentorRoutes';
+import mentorRoutes from './routes/mentorRoutes';
 import userRoutes from './routes/userRoutes';
 require('dotenv').config();
 
@@ -14,7 +14,7 @@ const port = process.env.PORT || process.env.ENTRY_PORT;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//app.use('/api/v1/', mentorRoutes);
+app.use('/api/v1/', mentorRoutes);
 app.use('/api/v1/', userRoutes);
 
 app.listen(port, () => {
