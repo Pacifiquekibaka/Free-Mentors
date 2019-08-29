@@ -6,7 +6,23 @@ import mentorController from '../controllers/controllerMentor';
 const router = express.Router();
 
 /*route to get all mentors*/
-router.get('/Mentors', mentorController.getAllMentors);
+router.get('/mentors', mentorController.getAllMentors);
 
+/*route to get a specific mentor*/
+router.get('/mentors/:id', mentorController.getSingleMentor);
 
 export default router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
