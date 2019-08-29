@@ -5,10 +5,25 @@ import giveResponse from '../helpers/response';
 
 class mentorController {
 
-    /*********view all mentors************/
-    static async getAllMentors(req, res) {
+    /*View all mentors*/
+    static getAllMentors(req, res) {
       giveResponse.responses(res, 200, mentor_data,false);
+    } 
+
+   /*View a specific mentor*/
+   static getSingleMentor(req, res) {
+    const findMentor = mentor_data.find(data =>data.mentorId === parseInt(req.params.id, 10));
+    if (findMentor) {
+      giveResponse.responses(res, 200, findMentor,false); 
+    }
+    else{
+      giveResponse.responses(res, 404, `Mentor doesn't exist`,true)
     }
    
+  }
+
 }
+
+
+
 export default mentorController;
