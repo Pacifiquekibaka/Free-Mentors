@@ -2,7 +2,6 @@ body
 {
     font-family: Tahoma, Geneva, sans-serif;
     color: #fff;
-    background: url(space-saving5.jpg);
     background-size: cover;
 }
 .signin
@@ -75,5 +74,31 @@ a:hover
 }
 ::placeholder {
     color:aliceblue;
-    opacity: 0.8; /* Firefox */
+    opacity: 0.8;
 }
+@media screen and (min-width: 600px){
+    .signin{
+         width: 400px;
+         height: 500px;
+    }
+    .signin h2{
+        font-size: 25px;
+    }
+    .signin a{
+        font-size: 25px;
+    }
+    form{
+         width: 400px;
+    }
+    input{
+         width: 350px;
+         font-size: 25px;
+    }
+    input[type=button]{
+        width: 160px;
+        line-height: 20px;
+        font-size: 25px;
+    }
+
+}
+

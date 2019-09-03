@@ -21,7 +21,6 @@
 </div>
 <div class="sidebar">
     <a href="admin.html">DASHBOARD</a>
-    <a href="#">Review</a>
 </div>
 <table class="centerTable">
   <caption>
@@ -94,8 +93,18 @@
   </tbody>
 </table> 
 <div class="row">
-    <input type="submit" value="Save Changes">
+    <input type="submit" value="Save Changes" onclick="myFunction()" />
 </div>
+<div id="msg">Change saved successfully!!</div>
+
+<script>
+  function myFunction() {
+      var x = document.getElementById("msg");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+  </script>
+
 </body>
   <!--footer section
 <div class="footer">
