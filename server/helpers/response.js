@@ -1,14 +1,15 @@
 class giveResponse {
 
-    static responses(res, statusCode, data, error = false) {
+    static responses(res, statusCode, data,error = false, message) {
       if (error) {
         return res.status(statusCode).json({
           status: statusCode,
-          error: data
+          error: message
         });
       }
       return res.status(statusCode).json({
         status: statusCode,
+        message,
         data
       });
     }
