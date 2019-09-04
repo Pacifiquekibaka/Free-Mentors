@@ -8,7 +8,7 @@ const { responses } = giveResponse;
 const createUser = async (req, res) => {
                 //joi
 const { error } = validate(req.body); 
-if (error) return res.status(401).send(error.details[0].message);
+if (error) return responses(res,401,null, true, error.details[0].message );
               //joi end    
   const {first_name,last_name,email,password,address,bio,occupation,expertise,is_admin} = req.body;
 
