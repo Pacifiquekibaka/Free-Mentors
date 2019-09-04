@@ -26,69 +26,85 @@
     </caption>
     <thead>
       <tr>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
+        <th scope="col">First Name and Last Name</th>
         <th scope="col">E-mail</th>
+        <th scope="col">Messages</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td scope="row" data-label="First Name">Mark</td>
-        <td data-label="Last Name">Petero</td>
+        <td scope="row" data-label="First Name">Mark Petero</td>
         <td data-label="E-mail">mark@gmail.com</td>
+        <td data-label="Messages">Hello I want help in networking fieild</td>
         <td data-label="action">
-            <button class="button accept"><i class="fas fa-check-circle"></i> Accept</button>
-            <button class="button decline"><i class="fas fa-window-close"></i> Decline</button>
+            <button class="button accept" onclick="myFunction()"><i class="fas fa-check-circle"></i> Accept</button>
+            <button class="button decline" onclick="myFunction2()"><i class="fas fa-window-close"></i> Decline</button>
         </td>
       </tr>
       <tr>
-        <td scope="row" data-label="First Name">Ders</td>
-        <td data-label="Last Name">Mugabo</td>
+        <td scope="row" data-label="First Name">Ders Mugabo</td>
         <td data-label="E-mail">ders@gmail.com</td>
+        <td data-label="Messages">Hello I want help in networking fieild</td>
         <td data-label="action">
-           <button class="button accept"><i class="fas fa-check-circle"></i> Accept</button>
-           <button class="button decline"><i class="fas fa-window-close"></i> Decline</button>
+           <button class="button accept" onclick="myFunction()"><i class="fas fa-check-circle"></i> Accept</button>
+           <button class="button decline" onclick="myFunction2()"><i class="fas fa-window-close"></i> Decline</button>
         </td>
       </tr>
       <tr>
-        <td scope="row" data-label="First Name">John</td>
-        <td data-label="Last Name">Nzaramba</td>
+        <td scope="row" data-label="First Name">John Nzaramba</td>
         <td data-label="E-mail">john@gmail.com</td>
+        <td data-label="Messages">Hello I want help in networking fieild</td>
         <td data-label="action">
-            <button class="button accept"><i class="fas fa-check-circle"></i> Accept</button>
-            <button class="button decline"><i class="fas fa-window-close"></i> Decline</button>
+            <button class="button accept" onclick="myFunction()" ><i class="fas fa-check-circle"></i> Accept</button>
+            <button class="button decline" onclick="myFunction2()"><i class="fas fa-window-close"></i> Decline</button>
         </td>
       </tr>
       <tr>
-        <td scope="row" data-label="First Name">Peter</td>
-        <td data-label="Last Name">Mugabo</td>
-        <td data-label="E-mail">peter@gmail.com</td>
+        <td scope="row" data-label="First Name">Peter Mugabo</td>
+        <td data-label="E-mail"></td>
+        <td data-label="Messages">Hello I want help in networking fieild</td>
         <td data-label="action">
-          <button class="button accept"><i class="fas fa-check-circle"></i> Accept</button>
-          <button class="button decline"><i class="fas fa-window-close"></i> Decline</button>
+          <button class="button accept" onclick="myFunction()"><i class="fas fa-check-circle"></i> Accept</button>
+          <button class="button decline" onclick="myFunction2()"><i class="fas fa-window-close"></i> Decline</button>
         </td>
       </tr>
       <tr>
-        <td scope="row" data-label="First Name">Sam</td>
-        <td data-label="Last Name">rukoko</td>
+        <td scope="row" data-label="First Name">Sam rukoko</td>
         <td data-label="E-mail">sam@gmail.com</td>
+        <td data-label="Messages">Hello I want help in networking fieild</td>
         <td data-label="action">
-          <button class="button accept"><i class="fas fa-check-circle"></i> Accept</button>
-          <button class="button decline"><i class="fas fa-window-close"></i> Decline</button>
+          <button class="button accept" onclick="myFunction()"><i class="fas fa-check-circle"></i> Accept</button>
+          <button class="button decline" onclick="myFunction2()"><i class="fas fa-window-close"></i> Decline</button>
         </td>
       </tr>
       <tr>
-        <td scope="row" data-label="First Name">Joy</td>
-        <td data-label="Last Name">Mukamanzi</td>
+        <td scope="row" data-label="First Name">Joy Mukamanzi</td>
         <td data-label="E-mail">joy@gmail.com</td>
+        <td data-label="Messages">Hello I want help in networking fieild</td>
         <td data-label="action">
-          <button class="button accept"><i class="fas fa-check-circle"></i> Accept</button>
-          <button class="button decline"><i class="fas fa-window-close"></i> Decline</button>
+          <button class="button accept" onclick="myFunction()"><i class="fas fa-check-circle"></i> Accept</button>
+          <button class="button decline" onclick="myFunction2()"><i class="fas fa-window-close"></i> Decline</button>
         </td>
       </tr>
     </tbody>
   </table> 
+  <div id="msg">Accepted sent to the user</div>
+  <div id="msg2">Declined sent to the user</div>
+
+  <script>
+    function myFunction() {
+        var x = document.getElementById("msg");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+    function myFunction2() {
+        var x = document.getElementById("msg2");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+    </script>
+
 </body>
  <!--footer section-->
 <div class="footer">

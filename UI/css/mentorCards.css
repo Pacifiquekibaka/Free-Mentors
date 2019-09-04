@@ -66,6 +66,9 @@ html {
     font: italic bold 12px/30px Georgia, serif;  
     font-size: 30px;   
   }
+  p{
+    font-family: "Lato", sans-serif;
+  }
    
   @media screen and (max-width: 650px) {
     .column {

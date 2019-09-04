@@ -15,8 +15,48 @@
         font: italic bold 25px/30px Georgia, serif;  
     }
     textarea{
-        height: 200px;
+        height: 312px;
     }
+#msg {
+    visibility: hidden;
+    min-width: 250px;
+    background-color:yellow;
+    color: #000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 30%;
+    top: 30px;
+    font-size: 17px;
+	  margin-right:5px;
+}
+#msg.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+    
 </style>    
 </head>
 <body>
@@ -26,42 +66,27 @@
         
         <div class="container2">
           <form action="#">
-              <div class="row">
-              <div class="col-25">
-                <label for="fname"><i class="fas fa-file-signature"></i>First Name</label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="lname"><i class="fas fa-file-signature"></i>Last Name</label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-              </div>
-            </div>
-            <div class="row">
-                    <div class="col-25">
-                      <label for="email"><i class="fas fa-envelope-square"></i>Your E-mail</label>
-                    </div>
-                    <div class="col-75">
-                      <input type="email" id="email" name="Email" placeholder="Your Email" required>
-                    </div>
-                  </div>
-            
             <div class="row">
               <div class="col-25">
                 <label for="subject"><i class="far fa-comment-alt"></i>Your Message</label>
               </div>
               <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="your question.." required></textarea>
+                <textarea id="subject" name="subject" placeholder="your question.."></textarea>
               </div>
             </div>
             <div class="row">
-             <input type="submit" value="Submit Your Request">
+             <input type="submit" value="Submit Your Request" onclick="myFunction()" />
             </div>
+            <div id="msg">Message sent successfully!!</div>
+
+            <script>
+              function myFunction() {
+                  var x = document.getElementById("msg");
+                  x.className = "show";
+                  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+              }
+              </script>
+
           </form>
         </div>
 </body>

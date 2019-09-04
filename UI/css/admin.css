@@ -47,22 +47,6 @@ body{
   background-color: #555;
   color: white;
 }
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-
 
 /*user table style*/
   table {
@@ -109,6 +93,45 @@ body{
   input[type=submit]:hover {
     background-color: #34e9d1;
   }
+  #msg {
+    visibility: hidden;
+    min-width: 250px;
+    background-color:yellow;
+    color: #000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 30%;
+    top: 30px;
+    font-size: 17px;
+	  margin-right:5px;
+}
+#msg.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
   
   table td img { text-align: center; }
   @media screen and (max-width: 600px) {
@@ -144,4 +167,76 @@ body{
 .centerTable{
   width: 75%;
   margin:auto;
+}
+@media screen and (max-width: 600px) {
+  
+  table { border: 0; }
+  
+  table caption { font-size: 1.3em; }
+  
+  table thead { display: none; }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child { border-bottom: 0; }
+  }
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    text-align: center;
+}
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+@media screen and (max-width: 1024px){
+  table { border: 0; }
+  table caption { font-size: 40px; }
+  table thead { display: none; }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    text-align: center;
+    font-size: 35px;
+  }
+  table td:last-child { border-bottom: 0; }
+
 }

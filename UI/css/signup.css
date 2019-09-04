@@ -60,5 +60,32 @@ h2
 }
 ::placeholder {
     color:aliceblue;
-    opacity: 0.8; /* Firefox */
+    opacity: 0.8; 
 }
+@media screen and (min-width: 600px) {
+	.signup{
+		width:400px;
+		height:800px;
+    }
+    .signup h2{
+        font-size: 25px;
+    }
+    .signup a{
+        font-size:25px;
+    }
+	form{
+		width: 400px;
+        text-align: center;
+	}
+	input{
+		width: 350px;
+		font-size: 26px;
+	}
+	input[type=button]{
+		width: 200px;
+		line-height: 25px;
+		font-size: 26px;
+	}
+}
+
+
