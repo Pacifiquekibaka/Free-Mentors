@@ -1,0 +1,10 @@
+#Ignoring node modules folder
+node_modules/
+#Ignoring NYC Output folder
+.nyc_output/
+#Ignoring Coverage folder
+coverage/
+#Ignoring Dotenv file
+.env
+.DS_Store
+dist/
