@@ -19,7 +19,7 @@ class mentorController {
     if (findMentor) {
       //omit password
       // eslint-disable-next-line no-unused-vars
-      const { password : _, ...omitpMentor } = findMentor;
+      const { password: _ , ...omitpMentor } = findMentor;
       return responses(res,200,{...omitpMentor}, false, 'Mentor received successfully' );
     
     }
@@ -31,6 +31,5 @@ class mentorController {
   }
 
 }
-
 
 export default mentorController;

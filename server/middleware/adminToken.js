@@ -5,4 +5,4 @@ function adminToken(req,res,next){
     next();
 
 }
-module.exports= adminToken;
+export default adminToken;
