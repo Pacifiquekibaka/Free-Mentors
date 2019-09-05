@@ -19,7 +19,7 @@ if (error) return responses(res,401,null, true, error.details[0].message );
     const comparePass = await bcrypt.compare(req.body.password, currentUser.password);
     if (!comparePass) return responses(res,404,null, true, 'invalid username or password' );
     const token=jwt.sign({id:currentUser.id, is_admin: currentUser.is_admin},process.env.JWT_SECRET,{expiresIn:"24h"});
-    // omit password
+    // omit password 
     // eslint-disable-next-line no-unused-vars
     const { password : _,address, bio, occupation, expertise, is_admin, ...omitpUser } = currentUser;
  
