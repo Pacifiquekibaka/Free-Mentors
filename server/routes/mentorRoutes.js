@@ -11,5 +11,6 @@ router.get('/mentors',[auth,mentorController.getAllMentors] );
 /*route to get a specific mentor*/
 router.get('/mentors/:id', [auth,mentorController.getSingleMentor]);
 
+
 export default router;
 

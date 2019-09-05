@@ -10,7 +10,7 @@ const createUser = async (req, res) => {
 const { error } = validate(req.body); 
 if (error) return responses(res,401,null, true, error.details[0].message );
               //joi end    
-  const {first_name,last_name,email,password,address,bio,occupation,expertise,is_admin} = req.body;
+  const {first_name,last_name,email,password,address,bio,occupation,expertise,is_mentor,is_admin} = req.body;
 
   let checkUser = user_data.find(user => user.email === req.body.email);
   if (checkUser) return responses(res,409,null, true, 'User already exist' );
@@ -25,6 +25,7 @@ if (error) return responses(res,401,null, true, error.details[0].message );
     bio,
     occupation,
     expertise,
+    is_mentor,
     is_admin
   };
 
@@ -33,15 +34,15 @@ if (error) return responses(res,401,null, true, error.details[0].message );
  user_data.push(newUser);
  
  //generate token
- const token=jwt.sign({id:newUser.id},process.env.JWT_SECRET,{expiresIn:"24h"});
+ const token=jwt.sign({id:newUser.id, is_mentor:newUser.is_mentor, is_admin:newUser.is_admin},process.env.JWT_SECRET,{expiresIn:"24h"});
  // omit password
  // eslint-disable-next-line no-unused-vars
  const { password : _, ...omitpUser } = newUser;
  
     return responses(res, 201, { token,...omitpUser }, false, 'User created successfully');
-  
-    }
 
 
+}
+    
 
 export default createUser;
