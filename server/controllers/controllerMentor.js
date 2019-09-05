@@ -1,6 +1,6 @@
 import mentor_data from '../models/mentor_data.js';
 import giveResponse from '../helpers/response';
-//import {validate} from "../middleware/validateMentor";
+//import user_data from '../models/user_data';
 
 const { responses} = giveResponse;
 class mentorController {
@@ -30,6 +30,7 @@ class mentorController {
    
   }
 
+  
 }
 
 export default mentorController;

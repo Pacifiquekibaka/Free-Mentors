@@ -1,4 +1,7 @@
 # Free-Mentors
+
+[![Build Status](https://travis-ci.org/Pacifiquekibaka/Free-Mentors.svg?branch=develop)](https://travis-ci.org/Pacifiquekibaka/Free-Mentors) [![Coverage Status](https://coveralls.io/repos/github/Pacifiquekibaka/Free-Mentors/badge.svg?branch=develop)](https://coveralls.io/github/Pacifiquekibaka/Free-Mentors?branch=develop)
+
 Free Mentors is a social initiative where accomplished professionals become role models to young people to provide free mentorship sessions.
 
 Required Features
